@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using USWalks.Data;
+using USWalks.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddDbContext<USWalksDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("USWalks"));
 });
+builder.Services.AddScoped<IRegionsRepository, RegionsRepository>();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 
@@ -21,6 +24,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
