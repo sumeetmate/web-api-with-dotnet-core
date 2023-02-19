@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using USWalks.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<USWalksDbContext>(options => 
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("USWalks"));
+});
 
 var app = builder.Build();
 
