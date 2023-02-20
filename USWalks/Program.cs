@@ -15,6 +15,7 @@ builder.Services.AddDbContext<USWalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("USWalks"));
 });
 builder.Services.AddScoped<IRegionsRepository, RegionsRepository>();
+builder.Services.AddScoped<IWalkRepository, WalkRepository>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
