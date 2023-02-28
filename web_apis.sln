@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USWalks", "USWalks.csproj", "{A3E8EA48-3B09-4424-B176-403D10A202EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USWalks", "USWalks\USWalks.csproj", "{A3E8EA48-3B09-4424-B176-403D10A202EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt_auth", "..\jwt_auth\jwt_auth.csproj", "{89C1EC2A-8857-4927-976E-DBB993316DC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt_auth", "jwt_auth\jwt_auth.csproj", "{89C1EC2A-8857-4927-976E-DBB993316DC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
